@@ -1,0 +1,53 @@
+﻿import pandas as pd
+df = pd.read_csv(r'C:\Users\NADA LABIB\Desktop\Analysis-of-Egyptian-Movies\data.csv', usecols=[' تاريخ العرض'])
+#print(df)
+
+prodYear = df.values
+date = []
+for i in prodYear:
+    date.append(i[0].split(' '))   
+#print(date)    
+    
+    
+def checkIfYear(y):
+    if len(y)!= 4:
+        return False
+    for n in y :
+        if not n.isdigit():
+            return False
+    return True
+
+year = []
+def takingYears(l):
+    for i in range(len(l)):
+        for j in range(len(l[i])):
+            if checkIfYear(l[i][j]):
+                year.append(l[i][j])
+    return year
+
+output = []            
+output = takingYears(date)
+#print(output)
+
+count = []
+def countingYears (o):
+    for i in range(len(o)):
+        counter = 0
+        for j in range(len(o)):
+            if o[i] == o[j]:
+                counter += 1
+                s = str(counter)
+        count.append(o[i]+":"+ s)
+    return count
+
+output2 = []
+output2 = countingYears(output)
+
+#list after removing duplicates
+output2 = list( dict.fromkeys(output2) ) 
+print(output2)
+
+
+
+
+    

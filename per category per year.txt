@@ -1,0 +1,59 @@
+﻿dff = pd.read_csv(r'C:\Users\NADA LABIB\Desktop\Analysis-of-Egyptian-Movies\data.csv', usecols=[' تاريخ العرض'])
+#print(df)
+
+prodYear = dff.values
+date = []
+for i in prodYear:
+    date.append(i[0].split(' '))   
+#print(date)    
+    
+    
+def checkIfYear(y):
+    if len(y)!= 4:
+        return False
+    for n in y :
+        if not n.isdigit():
+            return False
+    return True
+
+year = []
+def takingYears(l):
+    for i in range(len(l)):
+        for j in range(len(l[i])):
+            if checkIfYear(l[i][j]):
+                year.append(l[i][j])
+    return year
+
+outputt = []            
+outputt = takingYears(date)
+outputtt = []
+#outputtt = list( dict.fromkeys(outputt) )
+#print(outputt)
+
+
+appended = []
+def append(o,m):
+    for i in range(len(o)):
+         appended.append(str(o[i])+":"+str(m[i]))
+    return appended
+
+
+nada = []
+nada = append(outputt,filmTypes)
+#print(nada)
+
+final = []
+def countingPerYear(m):
+    for i in range(len(m)):
+        counter = 0
+        for j in range(len(m)):
+            if m[i] == m[j]:
+                counter += 1
+        final.append(str(m[i])+":"+str(counter))
+    return final
+    
+finall = []
+finall = countingPerYear(nada)
+finalll = list( dict.fromkeys(finall) )
+#print(finalll)
+\

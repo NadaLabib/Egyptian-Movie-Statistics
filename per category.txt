@@ -1,0 +1,30 @@
+﻿import pandas as pd
+import matplotlib.pyplot as plt
+# if using a Jupyter notebook, include:
+%matplotlib inline
+
+df = pd.read_csv(r'C:\Users\NADA LABIB\Desktop\Analysis-of-Egyptian-Movies\data.csv', usecols=[' تصنيف الفيلم'])
+#print(df)
+
+filmTypes = df.values
+#print(filmTypes)
+
+count = []
+def moviePerCategory(o):
+    for i in range(len(o)):
+        counter = 0
+        for j in range(len(o)):
+            if o[i] == o[j]:
+                counter += 1
+                s = str(counter)
+                z = str(o[i])
+        count.append(s+":"+z)
+    return count
+
+output2 = []
+output2 = moviePerCategory(filmTypes)
+#print(output2)
+
+#list after removing duplicates
+output2 = list( dict.fromkeys(output2) ) 
+print(output2)

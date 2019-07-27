@@ -1,0 +1,219 @@
+import matplotlib.pyplot as plt
+
+data = {"Romantic":257,"Comedy":242,"Drama":442,"Science fiction":5,"Historical":29,"Imagination":2,"suspense":12,"Sports":3,"Animation":1,"Short Movies":6,"Adventuerer":11,"Review":83,"war":7,"Family":3,"Movement":26,"Crime":65,"Documentary":5,"horror":1,"Ambiquity":10,"Biography":9}
+names = list(data.keys())
+values = list(data.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(25, 13), sharey=True)
+axs.bar(names, values)
+#axs[1].scatter(names, values)
+#axs[2].plot(names, values)
+fig.suptitle('Movies per category',fontsize=25)
+
+import matplotlib.pyplot as plt
+
+data = {"1940":10,"1941":12,"1942":24,"1943":16,"1944":21,"1945":46,"1947":55,"1948":56,"1949":49,"1950":53,"1951":56,"1952":60,"1953":66,"1954":70,"1955":58,"1956":47,"1957":57,"1958":54,"1959":61}
+dataa = {"1960":67,"1961":60,"1962":67,"1963":60,"1964":65,"1965":68,"1966":67,"1967":54,"1968":75,"1969":68,"1970":75,"1971":71,"1972":85,"1973":74,"1974":83,"1975":99,"1976":81,"1977":71,"1978":95,"1979":59}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+
+fig, axs = plt.subplots(1, 2, figsize=(25, 13), sharey=True)
+axs[0].bar(names, values)
+axs[1].bar(namess, valuess)
+fig.suptitle('Movies per year',fontsize=25)
+
+import matplotlib.pyplot as plt
+
+data = {"Togo Mezrahy":15,"Estefan Rosty":4,"Ahmed Badrkhan":36,"Farid El-Gendy":8,"Ebrahim Helmy":27,"Ahmed Galal":7,"Mohamed Karim":13,"Youssef Wahby":21,"Ahmed kamal":18,"Abd elsalam El-nabolsy":2}
+dataa = {"Neyazy Mostafa":99,"Ebrahim Omara":37,"Mohamed ABd El-Gawad":36,"Elsayed Zeyada":26,"Hussein Fawzy":41,"Henry Brakat":71,"Youssef Maalof":37,"Kamel Mdkor":26,"Kamal Selim":9,"Mohamed Tawfeq":2,"Ramses Nageb":5}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True )
+axs.bar(names, values)
+axs.bar(namess, valuess)
+#axs[2].plot(names, values)
+fig.suptitle('Movies per Directors part1',fontsize=25)
+
+import matplotlib.pyplot as plt
+
+data = {"Fouad Shebl":6,"Ahmed Nassar":1,"Abd El-Fatah Hassan":17,"Gamal Madkoor":13,"Ebrahim Lama":15,"Akef Negm":1,"Omar Gmeay":7,"Hassan Helmy":15,"Kamel El-Hefnawy":8,"Atef Salem":81}
+dataa = {"Mahmoud Farid":70,"Ali ElAres":2,"Abas Kamel":33,"Gamal El-Domyaty":53,"Mostafa Hassan":2,"Hamda Abd El-Wahab":13,"Abd El-Aziz Gad":79,"Hekmy Rafla":73,"Mohamed Galal":22,"Hassan El-Emam":88,"Adly Khalil":22}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True )
+axs.bar(names, values)
+axs.bar(namess, valuess)
+#axs[2].plot(names, values)
+fig.suptitle('Movies per Directors part2',fontsize=25)
+
+import matplotlib.pyplot as plt
+
+data = {"Roshdy Mohamed":2,"Remon Nasor":33,"Talaat Alam":44,"Seif Shawkat":24,"Elyas Mata":18,"Sherif Hamoda":53,"Salah Abo Seif":35,"Anwar Wagdy":13,"Hassan El-Seify":91,"Monir Mourad":11}
+dataa = {"Hussein Sedky":14,"Ahmed el Toukhy":6,"Youssef Shahin":27,"Mohamed Abo-Yousseif":8,"Anes Nahra":5,"Hassan Nam Allah":21,"Hassan Ramzy":16,"Hassan El-Seafy":91,"Ezz Zo El-Foukar":32 ,"Ahmed Essa":37}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True )
+axs.bar(names, values)
+axs.bar(namess, valuess)
+#axs[2].plot(names, values)
+fig.suptitle('Movies per Directors part3',fontsize=25)
+
+import matplotlib.pyplot as plt
+
+data = {"Aziza Amir":15,"Mahmoud Zo El-Foukar":28,"Ahmed Badrkhan":23,"El-Sayed Zeyada":39,"Badea Khairy":72,"Ahmed Galal":8,"Mohamed Karim":8,"Abas Alam":3,"Youssef Wahby":32,"Kamal Selim":11}
+dataa = {"Soliman Nageb":6,"Ahmed El-Mashraqy":14,"Neyazy Mostafa":14,"Omar Gmeay":11,"Nageb El-Rehany":9,"Hussein Fawzy":32,"Abo El-Soud El-Ebiary":143,"Henry Barkat":51,"Youssef Gohar":71,"Hassan Helmy":12}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True )
+axs.bar(names, values)
+axs.bar(namess, valuess)
+#axs[2].plot(names, values)
+fig.suptitle('Movies per Authors part1',fontsize=25)
+
+import matplotlib.pyplot as plt
+
+data = {"Abd El-Hamid Hamdy":1,"Abas Younes":2,"Beram El-Tounsy":17,"Fatouh Nashaty":4,"Kamal Selim":11,"Abd El-Wareth Asr":11,"Ahmed Ramy":5,"Moures Kasab":1,"Gamal Madkor":9,"Ahmed Kamel":10}
+dataa = {"Mohamed Abd El-Gawad":17,"Vector Hogo":2,"Ahmed Shokry":8,"Tawfiq El-Hakim":12,"Mahmoud Taimor":3,"Abd El-Aziz Ahmed":6,"Kamel El-Telmsany":11,"Saleh Soudy":2,"Zaki Ebrahim":5,"Abd El-Aziz Salam":40}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True )
+axs.bar(names, values)
+axs.bar(namess, valuess)
+#axs[2].plot(names, values)
+fig.suptitle('Movies per Authors part2',fontsize=25)
+
+import matplotlib.pyplot as plt
+
+data = {"Zaki Saleh":9,"Saleh Gawdat":17,"Fouad El-Gazeary":9,"Ali Ahmed":4,"Abd Allah Ahmed":3,"Zoher Bkeer":18,"Magdoline":1,"Youssef Essa":49,"Gamal Hamdy":8,"Ebrahim El-Wardany":20}
+dataa = {"Hassan Reda":12,"Youssef El-Sebaie":33,"Qasem Wagdy":4,"Saleh Gawdat":17,"Galel El-Bendary":17,"Fathy Qora":2,"Ali El-Rezqany":70,"Fatin Abd El-Wahab":7}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True )
+axs.bar(names, values)
+axs.bar(namess, valuess)
+#axs[2].plot(names, values)
+fig.suptitle('Movies per Authors part3',fontsize=25)
+
+import matplotlib.pyplot as plt
+
+data = {"January":127,"Febrauary":125,"Mars":159,"April":137,"May":92,"June":70,"July":75,"August":72,"September":117,"October":159,"November":158,"December":146}
+names = list(data.keys())
+values = list(data.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(20, 13), sharey=True)
+axs.bar(names, values)
+fig.suptitle('Movies per month',fontsize=25)
+
+
+import matplotlib.pyplot as plt
+
+data = {"Aqela Rateb":52,"Zozo Nabil":64,"Anwar Wagdy":59,"Hassan Fayeq":141,"Fakher Fakher":93,"Mahmoud El-Melegy":343,"Zaki Ebrahim":156}
+dataa = {"Nagm Ebrahim":41,"Abd El-Salam El-Nabolsy":129,"Thoraya Fakhry":196,"Estefan Rosty":91,"Ahmed Alam":36,"Zozo Shkeb":81,"Abbas Fares":79}
+dataaa = {"Soliman Nageb":47,"Amena Rezq":81,"Dawlat Abyad":24,"Mokhtar Osman":34,"Lotfy El-Hakim":112,"Mahmoud Zo El-Foukar":24}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+n = list(dataaa.keys())
+v = list(dataaa.values())
+
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True)
+axs.bar(names, values)
+axs.bar(namess, valuess)
+axs.bar(n, v)
+fig.suptitle('Movies per actor part1',fontsize=40)
+
+import matplotlib.pyplot as plt
+
+data = {"Mohsen Sarhan":88,"Fardos Mohamed":137,"Thoraya Helmy":54,"Fouad Shafeq":53,"Mansy Fahmy":42,"Abd El-Fatah El-Osary":87,"Edmon Twema":82}
+dataa = {"Beshara Wakem":96,"Tahya Karyoka":96,"Ahmed El-Hadad":58,"Asia Dagher":7,"Elweya Gamil":54,"Faten Hamama":91,"Hussein Reyad":142}
+dataaa = {"Mohamed El-Deeb":98,"Zenat Sedqy":150,"Memy Shkeeb":118,"Mohamed el-Kahlawy":24,"Lola Sedqy":58,"Hussein Essa":35}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+n = list(dataaa.keys())
+v = list(dataaa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True)
+axs.bar(names, values)
+axs.bar(namess, valuess)
+axs.bar(n, v)
+fig.suptitle('Movies per actor part2',fontsize=40)
+
+import matplotlib.pyplot as plt
+
+data = {"Fathya Ali":69,"Zozo El-Hakim":34,"Abbas Fares":79,"Zaki Rostom":47,"Mary Moneb":93,"Mahmoud Reda":59,"Hassan Kamel":74}
+dataa = {"Ali Abd El-Aal":55,"Layla Mourad":25,"Rawheya Khaled":29,"Zenab Sedqy":61,"Koka":21,"Layla Fawzy":66,"Mohamed Tawfiq":93}
+dataaa = {"Hassan El-Baroudy":74,"Youssef Wahby":68,"Victoria Hebeqa":39,"Mohamed Attia":12,"Safa El-Gamil":24,"Hussein El-Mlegy":22}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+n = list(dataaa.keys())
+v = list(dataaa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True)
+axs.bar(names, values)
+axs.bar(namess, valuess)
+axs.bar(n, v)
+fig.suptitle('Movies per actor part3',fontsize=40)
+
+import matplotlib.pyplot as plt
+
+data = {"Gamalat Zayed":76,"Ali El-Kassar":30,"Hamed Morsy":35,"Reyad El-Qasbagy":154,"Abbas El-Daly":122,"Tawfiq Sadeq":16,"Asmhan":2}
+dataa = {"Salha Qaseen":34,"Moahmoud Ismail":33,"Lotfeya Amen":16,"Abd El-Azim Kamel":131,"Esmat Abd El-Alem":13,"Abd El-Monem Ismail":282,"Nageb El Rehany":5}
+dataaa = {"Ismail Yassin":203,"Souad Ahmed":67,"Mohamed Amin":18,"Farid El-Atrash":33,"Samia Gamal":61,"Grasya Qaseen":18}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+n = list(dataaa.keys())
+v = list(dataaa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(40, 18), sharey=True)
+axs.bar(names, values)
+axs.bar(namess, valuess)
+axs.bar(n,v)
+fig.suptitle('Movies per actor part4',fontsize=40)
+
+import matplotlib.pyplot as plt
+
+data = {"Sharfantah":40,"Serag Monir":123,"Rashad Hamed":85,"Violette Sedawy":5,"Fouad El-Rashedy":21,"Eskandar Mansy":102,"Doreya Ahmed":21}
+dataa = {"Aziza Helmy":155,"Mohsen Hasnen":217,"Amena Sherif":22,"Amal Zayed":17,"Shafiq Nour El-din":128,"Gina":25,"Nadia El-Sabaa":19}
+dataaa = {"Aziza Badr":41,"Motawea Essa":152,"Abd El-Ghany Mohamed":54,"Adel Adham":62,"Ebrahim Heshmat":117,"Awatef Ramadan":44}
+names = list(data.keys())
+values = list(data.values())
+namess = list(dataa.keys())
+valuess = list(dataa.values())
+n = list(dataaa.keys())
+v = list(dataaa.values())
+
+fig, axs = plt.subplots(1, 1, figsize=(43, 18), sharey=True)
+axs.bar(names, values)
+axs.bar(namess, valuess)
+axs.bar(n, v)
+fig.suptitle('Movies per actor part5',fontsize=40)
+
+

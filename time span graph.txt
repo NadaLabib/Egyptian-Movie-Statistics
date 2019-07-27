@@ -1,0 +1,58 @@
+﻿      google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Resource');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+        ['1', 'نادية السبع', 'spring',
+         new Date(1944, 2, 22), new Date(1972, 5, 20), null, 100, null],
+        ['2', 'محسن حسنين', 'summer',
+         new Date(1944.0, 5, 21), new Date(1968, 8, 20), null, 100, null],
+        ['3', 'صوفي ديمتري', 'autumn',
+         new Date(1944, 8, 21), new Date(1953, 11, 20), null, 100, null],
+        ['4', 'محمد أبو دراع', 'winter',
+         new Date(1944, 11, 21), new Date(1945, 2, 21), null, 100, null],
+        ['5', 'نبوية مصطفى', 'spring',
+         new Date(1944, 2, 22), new Date(1955, 5, 20), null, 100, null],
+        ['6', 'محمد الديب', 'summer',
+         new Date(1944, 5, 21), new Date(1971, 8, 20), null, 0, null],
+        ['7', 'محمد راغب', 'autumn',
+         new Date(1944, 8, 21), new Date(1946, 11, 20), null, 0, null],
+        ['8', 'أمينة نور الدين', 'winter',
+         new Date(1943, 11, 21), new Date(1956, 2, 21), null, 0, null],
+        ['9', 'شهرزاد', 'sports',
+         new Date(1944, 8, 4), new Date(1964, 1, 1), null, 100, null],
+        ['10', 'إسماعيل يس', 'sports',
+         new Date(1944, 2, 31), new Date(1973, 9, 20), null, 100, null],
+        ['11', 'بدرية رأفت', 'sports',
+         new Date(1943, 9, 28), new Date(1953, 5, 20), null, 100, null],
+        ['12', 'علي حمامة', 'sports',
+         new Date(1944, 9, 8), new Date(1944, 11, 21), null, 100, null],
+         
+      ]);
+
+      var options = {
+        height: 400,
+
+        gantt: {
+        
+          trackHeight: 30
+          
+        },
+
+      };
+
+      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }

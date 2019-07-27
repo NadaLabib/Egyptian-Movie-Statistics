@@ -1,0 +1,53 @@
+﻿import pandas as pd
+df = pd.read_csv(r'C:\Users\NADA LABIB\Desktop\Analysis-of-Egyptian-Movies\data.csv', usecols=[' تاريخ العرض'])
+#print(df)
+
+prodYear = df.values
+date = []
+for i in prodYear:
+    date.append(i[0].split(' '))   
+#print(date)    
+    
+    
+def checkIfMonth(m):
+    if m == '':
+        return False
+    for n in m :
+        if n.isdigit():
+            return False
+    return True
+
+month = []
+def takingMonth(l):
+    for i in range(len(l)):
+        for j in range(len(l[i])):
+            if checkIfMonth(l[i][j]):
+                month.append(l[i][j])
+    return month
+
+output = []            
+output = takingMonth(date)
+#print(output)
+
+count = []
+def countingMonths (o):
+    for i in range(len(o)):
+        counter = 0
+        for j in range(len(o)):
+            if o[i] == o[j]:
+                counter += 1
+                s = str(counter)
+        count.append(o[i]+":"+ s)
+    return count
+
+output2 = []
+output2 = countingMonths(output)
+
+#list after removing duplicates
+output2 = list( dict.fromkeys(output2) ) 
+print(output2)
+
+
+
+
+    
